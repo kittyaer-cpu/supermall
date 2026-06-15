@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>超級百貨 PLUS 豪華版</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <main class="app">
+    <section id="lobby" class="card lobby">
+      <h1>超級百貨 PLUS</h1>
+      <p>線上多人豪華版｜32格棋盤｜1～4人</p>
+      <input id="playerName" placeholder="輸入玩家名稱" maxlength="8" />
+      <div class="row">
+        <button id="createRoom">建立房間</button>
+        <input id="roomCodeInput" placeholder="房號" maxlength="6" />
+        <button id="joinRoom">加入房間</button>
+      </div>
+      <p class="hint">建立後把房號傳給朋友。</p>
+    </section>
+
+    <section id="game" class="game hidden">
+      <header class="topbar">
+        <div><b>房號：</b><span id="roomCode">----</span></div>
+        <div><b>回合：</b><span id="turnName">--</span></div>
+      </header>
+
+      <section class="board-wrap">
+        <div id="board" class="board"></div>
+      </section>
+
+      <aside class="panel card">
+        <h2>玩家狀態</h2>
+        <div id="players"></div>
+        <button id="startGame">開始遊戲</button>
+        <button id="rollDice" disabled>擲骰子 🎲</button>
+        <div id="dice" class="dice">-</div>
+        <div id="actions"></div>
+        <div id="log" class="log"></div>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
